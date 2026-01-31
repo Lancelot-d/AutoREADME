@@ -31,7 +31,8 @@ class AutoREADMEApp:
             
             # Filter out banned repositories
             repos = [repo for repo in repos if repo["name"].lower() not in [r.lower() for r in self.ban_repos]]
-            
+            # Sort repositories by last modified date (most recent first)
+            repos = sorted(repos, key=lambda r: r.get("updated_at", ""), reverse=True)
             # Format repositories into the required structure
             projects = [
                 {
