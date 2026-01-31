@@ -2,6 +2,13 @@
 
 Automatically generates and updates GitHub profile READMEs using AI.
 
+## Key Features
+
+- **Fully automated** - Runs on GitHub Actions, no server needed
+- **Zero infrastructure costs** - Executes directly in your CI/CD pipeline
+- **AI-powered content** - Leverages Together AI for intelligent README generation
+- **Public repo integration** - Automatically pulls from your GitHub repositories
+
 ## Setup
 
 1. Install dependencies: `uv sync`
