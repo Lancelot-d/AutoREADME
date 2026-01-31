@@ -67,6 +67,7 @@ class LLMClient:
         - A brief introduction be professional and engaging but concise and not too much, that include that I am a software developer loving automation.
         - A showcase of the following projects in a three-liner format (Brief description and skill used and link):
         {projects_text}
+        -After 3 projects switch to one-liner format for the rest of the projects with link and name only.
 
         My contact information is  : https://www.linkedin.com/in/lancelot-domart-83b762204/
         
