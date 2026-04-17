@@ -30,6 +30,6 @@ jobs:
       - name: Run AutoREADME
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           python src/main.py

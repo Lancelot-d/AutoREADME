@@ -16,7 +16,7 @@ class AutoREADMEApp:
         """
         self.config = config
         self.github_client = GitHubClient(token=config.github_token)
-        self.llm_client = LLMClient(api_key=config.together_api_key)
+        self.llm_client = LLMClient(api_key=config.openrouter_api_key)
         self.ban_repos = ["Lancelot-d"]  # Repositories to exclude from processing
     
     def generate_profile_readme(self) -> str:

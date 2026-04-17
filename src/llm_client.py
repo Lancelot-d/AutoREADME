@@ -1,21 +1,24 @@
-"""LLM client for interacting with Together AI API."""
-from together import Together
+"""LLM client for interacting with OpenRouter API."""
+from openai import OpenAI
 
 
 class LLMClient:
-    """Client for interacting with Together AI's LLM API."""
+    """Client for interacting with OpenRouter's chat completions API."""
     
-    DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+    DEFAULT_MODEL = "google/gemma-4-26b-a4b-it:free"
     
     def __init__(self, api_key: str, model: str = DEFAULT_MODEL):
         """
         Initialize LLM client.
         
         Args:
-            api_key: Together AI API key for authentication.
+            api_key: OpenRouter API key for authentication.
             model: Model identifier to use for completions.
         """
-        self._client = Together(api_key=api_key)
+        self._client = OpenAI(
+            api_key=api_key,
+            base_url="https://openrouter.ai/api/v1"
+        )
         self._model = model
     
     def generate_completion(self, prompt: str) -> str:

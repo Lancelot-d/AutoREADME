@@ -10,7 +10,7 @@ class Config:
     
     github_username: str
     github_token: str
-    together_api_key: str
+    openrouter_api_key: str
     
     @classmethod
     def from_env(cls) -> "Config":
@@ -26,16 +26,16 @@ class Config:
         load_dotenv()
         
         github_token = os.getenv("GH_TOKEN")
-        together_api_key = os.getenv("TOGETHER_API_KEY")
+        openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
         github_username = "lancelot-d"  # Fixed username for the application
         
         if not github_token:
             raise ValueError("GH_TOKEN environment variable is required")
-        if not together_api_key:
-            raise ValueError("TOGETHER_API_KEY environment variable is required")
+        if not openrouter_api_key:
+            raise ValueError("OPENROUTER_API_KEY environment variable is required")
         
         return cls(
             github_username=github_username,
             github_token=github_token,
-            together_api_key=together_api_key
+            openrouter_api_key=openrouter_api_key
         )
