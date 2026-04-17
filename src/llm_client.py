@@ -5,7 +5,7 @@ from openai import OpenAI
 class LLMClient:
     """Client for interacting with OpenRouter's chat completions API."""
     
-    DEFAULT_MODEL = "google/gemma-4-26b-a4b-it:free"
+    DEFAULT_MODEL = "mistralai/mistral-7b-instruct:free"
     
     def __init__(self, api_key: str, model: str = DEFAULT_MODEL):
         """
