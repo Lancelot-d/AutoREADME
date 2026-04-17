@@ -26,13 +26,13 @@ class Config:
         load_dotenv()
         
         github_token = os.getenv("GH_TOKEN")
-        openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
+        openrouter_api_key = os.getenv("OPEN_ROUTER_KEY")
         github_username = "lancelot-d"  # Fixed username for the application
         
         if not github_token:
             raise ValueError("GH_TOKEN environment variable is required")
         if not openrouter_api_key:
-            raise ValueError("OPENROUTER_API_KEY environment variable is required")
+            raise ValueError("OPEN_ROUTER_KEY environment variable is required")
         
         return cls(
             github_username=github_username,
